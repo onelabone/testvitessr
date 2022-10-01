@@ -8,8 +8,8 @@ const virtualFile = '@virtual-file'
 const virtualId = '\0' + virtualFile
 const nestedVirtualFile = '@nested-virtual-file'
 const nestedVirtualId = '\0' + nestedVirtualFile
-import Components from "unplugin-vue-components/vite";
-import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
+// import Components from "unplugin-vue-components/vite";
+// import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 
 const base = '/test/'
 
