@@ -1,5 +1,7 @@
 <template>
   <h1>Home</h1>
+  <NTag style="color:red">This is Naive Tag</NTag>
+  <NText style="color:red">This is Naive Text</NText>
   <NButton style="color:red">This is Naive Button</NButton>
   <p>
     <img src="../assets/logo.png" alt="logo" />
@@ -22,7 +24,7 @@
 
 <script setup>
 // import pkg from 'naive-ui'
-// const { NButton } = pkg
+// const { NButton, NTag, NText } = pkg
 import foo from '@foo'
 import { msg as virtualMsg } from '@virtual-file'
 import { reactive, defineAsyncComponent } from 'vue'

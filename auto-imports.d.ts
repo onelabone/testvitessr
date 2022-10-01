@@ -2,9 +2,13 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
+  const NButton: typeof import('naive-ui')['NButton']
+  const NIcon: typeof import('naive-ui')['NIcon']
+  const NTag: typeof import('naive-ui')['NTag']
   const computed: typeof import('vue')['computed']
   const createApp: typeof import('vue')['createApp']
   const customRef: typeof import('vue')['customRef']
+  const darkTheme: typeof import('naive-ui')['darkTheme']
   const defineAsyncComponent: typeof import('vue')['defineAsyncComponent']
   const defineComponent: typeof import('vue')['defineComponent']
   const effectScope: typeof import('vue')['effectScope']
@@ -47,6 +51,9 @@ declare global {
   const useAttrs: typeof import('vue')['useAttrs']
   const useCssModule: typeof import('vue')['useCssModule']
   const useCssVars: typeof import('vue')['useCssVars']
+  const useDialog: typeof import('naive-ui')['useDialog']
+  const useMessage: typeof import('naive-ui')['useMessage']
+  const useNotification: typeof import('naive-ui')['useNotification']
   const useRoute: typeof import('vue-router')['useRoute']
   const useRouter: typeof import('vue-router')['useRouter']
   const useSlots: typeof import('vue')['useSlots']

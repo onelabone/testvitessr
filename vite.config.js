@@ -8,6 +8,8 @@ const virtualFile = '@virtual-file'
 const virtualId = '\0' + virtualFile
 const nestedVirtualFile = '@nested-virtual-file'
 const nestedVirtualId = '\0' + nestedVirtualFile
+import Components from "unplugin-vue-components/vite";
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 
 const base = '/test/'
 
@@ -22,10 +24,17 @@ export default defineConfig(({ command, ssrBuild }) => ({
     
     vuePlugin(),
     vueJsx(),
-    AutoImport({
-      imports: ['vue', 'vue-router'],
-      resolvers: []
-    }),
+    // Components({
+    //   resolvers: [NaiveUiResolver()],
+    //   }),
+      
+    // AutoImport({
+    //   imports: ['vue', 'vue-router', {
+    //     'naive-ui': ['useDialog', 'useMessage', 'useNotification', 'NTag', 'NButton', 'NIcon', 'darkTheme'],
+    //   }],
+      
+    //   resolvers: [NaiveUiResolver()]
+    // }),
     {
       name: 'virtual',
       resolveId(id) {
