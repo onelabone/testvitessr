@@ -76,7 +76,7 @@ export async function createServer(
       const url = req.originalUrl.replace('/test/', '/')
 
       let template, render
-      if (!1) {
+      if (!isProd) {
         // always read fresh template in dev
         template = fs.readFileSync(resolve('index.html'), 'utf-8')
         template = await vite.transformIndexHtml(url, template)
