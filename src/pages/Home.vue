@@ -1,5 +1,6 @@
 <template>
   <h1>Home</h1>
+  <n-button>This is Naive Button</n-button>
   <p>
     <img src="../assets/logo.png" alt="logo" />
   </p>
@@ -20,6 +21,8 @@
 </template>
 
 <script setup>
+import pkg from 'naive-ui'
+const { NButton } = pkg
 import foo from '@foo'
 import { msg as virtualMsg } from '@virtual-file'
 import { reactive, defineAsyncComponent } from 'vue'

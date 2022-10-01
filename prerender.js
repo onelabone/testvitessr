@@ -3,10 +3,11 @@
 
 import fs from 'node:fs'
 import path from 'node:path'
+import manifest from './dist/static/ssr-manifest.json' assert { type: 'json' };
+// const manifest = (await import('./dist/static/ssr-manifest.json' ) ).default 
 
 const toAbsolute = (p) => path.resolve(__dirname, p)
 
-const manifest = (await import('./dist/static/ssr-manifest.json')).default
 const template = fs.readFileSync(toAbsolute('dist/static/index.html'), 'utf-8')
 const { render } = await import('./dist/server/entry-server.js')
 

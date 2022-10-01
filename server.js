@@ -3,7 +3,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import express from 'express'
- 
+
 const isTest = process.env.NODE_ENV === 'test' || !!process.env.VITE_TEST_BUILD
 
 export async function createServer(
@@ -22,7 +22,9 @@ export async function createServer(
 
   const manifest = isProd
     ? // @ts-ignore
-      (await import('./dist/client/ssr-manifest.json')).default
+      (await import('./dist/client/ssr-manifest.json', {
+        assert: { type: 'json' }
+      })).default
     : {}
 
   console.log('00000000000000', manifest);
