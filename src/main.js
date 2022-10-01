@@ -1,6 +1,7 @@
 import { createSSRApp } from 'vue'
 import App from './App.vue'
 import { createRouter } from './router'
+import naive from 'naive-ui'
 
 // SSR requires a fresh app instance per request, therefore we export a function
 // that creates a fresh app instance. If using Vuex, we'd also be creating a
@@ -9,5 +10,6 @@ export function createApp() {
   const app = createSSRApp(App)
   const router = createRouter()
   app.use(router)
+  app.use(naive)
   return { app, router }
 }

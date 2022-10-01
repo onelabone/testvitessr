@@ -1,4 +1,5 @@
 import path from 'node:path'
+import AutoImport from 'unplugin-auto-import/vite';
 import { defineConfig } from 'vite'
 import vuePlugin from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
@@ -21,6 +22,10 @@ export default defineConfig(({ command, ssrBuild }) => ({
     
     vuePlugin(),
     vueJsx(),
+    AutoImport({
+      imports: ['vue', 'vue-router'],
+      resolvers: []
+    }),
     {
       name: 'virtual',
       resolveId(id) {
