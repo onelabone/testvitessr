@@ -1,0 +1,396 @@
+@use "sass:map";
+@use "variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;800&display=swap");
+
+// *************************************
+// LIGHT THEME CLASSES
+// *************************************
+.fg-selected {
+  color: map-get($mycolors, "light-fg-0") !important;
+}
+.fg-active {
+  color: map-get($mycolors, "light-fg-0");
+}
+.fg-idle {
+  color: map-get($mycolors, "light-fg-3");
+}
+.tab-selected {
+  background: map-get($mycolors, "light-bg-1");
+}
+.carousel-tab {
+  background: map-get($mycolors, "light-bg-1");
+}
+
+.mobile-action-bar-bg {
+  background: map-get($mycolors, "dark-bg-0") !important;
+}
+
+.mobile-action-bar-icon {
+  display: block;
+  color: map-get($mycolors, "light-fg-4") !important;
+  font-size: 25px;
+}
+
+.mobile-action-bar-icon-active {
+  color: map-get($mycolors, "light-fg-2") !important;
+}
+
+.card-default {
+  background: transparent !important;
+  border: none !important;
+}
+
+.race-select {
+  min-width: 80px;
+}
+
+.pool-select {
+  background: transparent;
+  border-radius: 0px;
+  color: map-get($mycolors, "light-fg-0");
+  &:focus {
+    background: transparent !important;
+  }
+  &:hover {
+    background: transparent !important;
+  }
+}
+
+.pool-select-active {
+  border-bottom: 2px solid map-get($mycolors, "light-fg-0");
+  background: transparent;
+  &:focus {
+    background: transparent;
+  }
+}
+
+.bet-modal-submit-btn {
+  width: 100%;
+  background: map-get($mycolors, "dark-bg-2");
+  font-size: 1.2rem;
+  color: map-get($mycolors, "light-fg-3");
+  padding: 20px 0px;
+  &:hover {
+    background: map-get($mycolors, "primary") !important;
+    color: map-get($mycolors, "light-fg-0") !important;
+  }
+
+  &:focus {
+    background: map-get($mycolors, "dark-bg-0") !important;
+    color: map-get($mycolors, "light-fg-3") !important;
+  }
+}
+
+.bg-0 {
+  background-color: map-get($mycolors, "light-bg-0");
+}
+.bg-1 {
+  background-color: map-get($mycolors, "light-bg-1");
+}
+.bg-2 {
+  background-color: map-get($mycolors, "light-bg-2");
+}
+.bg-3 {
+  background-color: map-get($mycolors, "light-bg-3") !important;
+}
+
+.bg-f0 {
+  background-color: map-get($mycolors, "light-fg-0");
+}
+.bg-f1 {
+  background-color: map-get($mycolors, "light-fg-1");
+}
+.bg-f2 {
+  background-color: map-get($mycolors, "light-fg-2");
+}
+.bg-f3 {
+  background-color: map-get($mycolors, "light-fg-3") !important;
+}
+
+.fg-0 {
+  color: map-get($mycolors, "light-fg-0");
+}
+.fg-1 {
+  color: map-get($mycolors, "light-fg-1");
+}
+.fg-2 {
+  color: map-get($mycolors, "light-fg-2");
+}
+.fg-3 {
+  color: map-get($mycolors, "light-fg-3");
+}
+.fg-4 {
+  color: map-get($mycolors, "light-fg-4");
+}
+
+.fg-b0 {
+  color: map-get($mycolors, "light-bg-0");
+}
+.fg-b1 {
+  color: map-get($mycolors, "light-bg-1");
+}
+.fg-b2 {
+  color: map-get($mycolors, "light-bg-2");
+}
+.fg-b3 {
+  color: map-get($mycolors, "light-bg-3");
+}
+.fg-b4 {
+  color: map-get($mycolors, "light-bg-4");
+}
+
+.field-st {
+  background-color: map-get($mycolors, "light-field-st") !important;
+}
+
+.field-hv {
+  background-color: map-get($mycolors, "light-field-hv") !important;
+}
+
+.field-aw {
+  background-color: map-get($mycolors, "light-field-aw") !important;
+}
+
+.button-pickhorse {
+  font-size: 15px;
+  font-weight: 400;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  margin-right: 10px;
+  background: transparent;
+  border-radius: 25px;
+  color: map-get($mycolors, "light-fg-0");
+  box-shadow: none;
+  border: 1px solid #5555;
+  &:focus {
+    background: transparent !important;
+    color: map-get($mycolors, "light-fg-0") !important;
+  }
+  &:hover {
+    background: map-get($mycolors, "primary") !important;
+    color: map-get($mycolors, "light-fg-0") !important;
+  }
+}
+
+.number-pickhorse {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100px;
+  background: transparent;
+  border-radius: 25px;
+  padding: 5px;
+  overflow: hidden;
+  box-shadow: none;
+  border: 1px solid #5555;
+  button {
+    background: transparent;
+    color: map-get($mycolors, "light-fg-0");
+    border: 0px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  input {
+    display: block;
+    color: map-get($mycolors, "light-fg-0");
+    width: 50px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0 5px;
+    text-align: center;
+  }
+}
+
+.default-modal {
+  .n-dialog__action {
+    .n-button {
+      min-width: 49%;
+      padding: 20px 10px;
+    }
+
+    .n-button--tertiary-type {
+      background: map-get($mycolors, "light-bg-1");
+    }
+  }
+}
+
+.card-gradient {
+  background: linear-gradient(
+    to left,
+    rgba(map-get($mycolors, "primary"), 1),
+    map-get($mycolors, "light-bg-1")
+  );
+  border: none !important;
+}
+
+// *************************************
+// DARK THEME CLASSES
+// *************************************
+.dark-theme {
+  .fg-selected {
+    color: map-get($mycolors, "primary") !important;
+  }
+  .fg-active {
+    color: map-get($mycolors, "dark-fg-0");
+  }
+  .fg-idle {
+    color: map-get($mycolors, "dark-fg-3");
+  }
+  .tab-selected {
+    background: map-get($mycolors, "dark-bg-3");
+  }
+  .carousel-tab {
+    background: map-get($mycolors, "dark-bg-0") !important;
+  }
+  .mobile-action-bar-bg {
+    background: map-get($mycolors, "dark-bg-0") !important;
+  }
+  .mobile-action-bar-icon {
+    display: block;
+    color: map-get($mycolors, "dark-fg-1") !important;
+    font-size: 25px;
+  }
+  .mobile-action-bar-icon-active {
+    color: map-get($mycolors, "dark-fg-0") !important;
+  }
+  .pool-select {
+    color: map-get($mycolors, "light-fg-3");
+  }
+
+  .pool-select-active {
+    border-bottom: 2px solid map-get($mycolors, "primary");
+  }
+
+  .bg-0 {
+    background-color: map-get($mycolors, "dark-bg-0");
+  }
+  .bg-1 {
+    background-color: map-get($mycolors, "dark-bg-1");
+  }
+  .bg-2 {
+    background-color: map-get($mycolors, "dark-bg-2");
+  }
+  .bg-3 {
+    background-color: map-get($mycolors, "dark-bg-3") !important;
+  }
+
+  .bg-f0 {
+    background-color: map-get($mycolors, "dark-fg-0");
+  }
+  .bg-f1 {
+    background-color: map-get($mycolors, "dark-fg-1");
+  }
+  .bg-f2 {
+    background-color: map-get($mycolors, "dark-fg-2");
+  }
+  .bg-f3 {
+    background-color: map-get($mycolors, "dark-fg-3") !important;
+  }
+
+  .fg-0 {
+    color: map-get($mycolors, "dark-fg-0");
+  }
+  .fg-1 {
+    color: map-get($mycolors, "dark-fg-1");
+  }
+  .fg-2 {
+    color: map-get($mycolors, "dark-fg-2");
+  }
+  .fg-3 {
+    color: map-get($mycolors, "dark-fg-3");
+  }
+  .fg-4 {
+    color: map-get($mycolors, "dark-fg-4");
+  }
+
+  .fg-b0 {
+    color: map-get($mycolors, "dark-bg-0");
+  }
+  .fg-b1 {
+    color: map-get($mycolors, "dark-bg-1");
+  }
+  .fg-b2 {
+    color: map-get($mycolors, "dark-bg-2");
+  }
+  .fg-b3 {
+    color: map-get($mycolors, "dark-bg-3");
+  }
+  .fg-b4 {
+    color: map-get($mycolors, "dark-bg-4");
+  }
+
+  .field-st {
+    background-color: map-get($mycolors, "dark-field-st");
+  }
+
+  .field-hv {
+    background-color: map-get($mycolors, "dark-field-hv");
+  }
+
+  .field-aw {
+    background-color: map-get($mycolors, "dark-field-aw");
+  }
+
+  .button-pickhorse {
+    background: map-get($mycolors, "dark-bg-3");
+    color: map-get($mycolors, "light-fg-3");
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border: 1px solid transparent;
+    &:focus {
+      background: map-get($mycolors, "dark-bg-3") !important;
+      color: map-get($mycolors, "light-fg-3") !important;
+    }
+    &:hover {
+      background: map-get($mycolors, "white") !important;
+      color: map-get($mycolors, "light-fg-0") !important;
+    }
+  }
+  .number-pickhorse {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100px;
+    background: map-get($mycolors, "dark-bg-3");
+    border-radius: 25px;
+    padding: 5px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    input {
+      color: map-get($mycolors, "light-fg-3");
+    }
+    button {
+      color: map-get($mycolors, "light-fg-3");
+    }
+  }
+
+  .default-modal {
+    .n-dialog__action {
+      .n-button {
+        min-width: 49%;
+      }
+      .n-button--default-type {
+        border: 1px solid map-get($mycolors, "dark-bg-3") !important;
+      }
+      .n-button--tertiary-type {
+        border: 1px solid map-get($mycolors, "dark-bg-3");
+        background: map-get($mycolors, "dark-bg-3");
+      }
+    }
+  }
+  .card-gradient {
+    background: linear-gradient(
+      to left,
+      map-get($mycolors, "dark-bg-3"),
+      map-get($mycolors, "dark-bg-2"),
+      map-get($mycolors, "dark-bg-1")
+    );
+    border: none !important;
+  }
+}
+
+body {
+  /* Disables pull-to-refresh but allows overscroll glow effects. */
+  overscroll-behavior-y: contain;
+}

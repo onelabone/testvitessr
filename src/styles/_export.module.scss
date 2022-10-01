@@ -1,0 +1,8 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+:export {
+  @each $key, $value in $mycolors {
+    #{unquote($key)}: $value;
+  }
+}
